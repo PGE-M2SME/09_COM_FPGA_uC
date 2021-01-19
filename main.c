@@ -3,7 +3,7 @@
   * @file           : main.c
   * @brief          : Main program body
   ******************************************************************************
-  * @athours        : Clément Berges, Farouk Madouni, Youssef Abbih
+  * @athors        : Clément Berges, Farouk Madouni, Youssef Abbih
   * @brief We used cubeMX to generate the neccessary drivers for the communication
   * between the stm32 and the FPGA.
   * notes : we have documented only the necessary functions.
