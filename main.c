@@ -32,8 +32,8 @@ int main(void)
     /** 
     * pull the cs pin LOW.
     * @param[in] GPIOx: where x can be (A..K) to select the GPIO peripheral.
-    • GPIO_Pin_x: specifies the port bit to be written. where x can be (0..15).
-    • PinState: specifies the value to be written to the selected bit. GPIO_PIN_RESET: to clear the port pin
+    * @param[in] GPIO_Pin_x: specifies the port bit to be written. where x can be (0..15).
+    * @param[in] PinState: specifies the value to be written to the selected bit. GPIO_PIN_RESET: to clear the port pin
     */ 
  		for(data[1]=0;data[1]<128;data[1]++)
  		  {
@@ -41,18 +41,18 @@ int main(void)
     /** 
     * transmit data to the FPGA via SPI protocol.
     * @param[in] hspi: pointer to a SPI_HandleTypeDef structure that contains the configuration information for SPI module.
-    • @param[in] pData: pointer to data buffer
-    • @param[in] Size: amount of data to be sent
-    • @param[in] Timeout: Timeout duration
+    * @param[in] pData: pointer to data buffer
+    * @param[in] Size: amount of data to be sent
+    * @param[in] Timeout: Timeout duration
     */ 
  	  	  HAL_Delay(1000);
  		  }
  		 HAL_GPIO_WritePin (GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
     /** 
-    * pull the cs pin LOW.
+    * pull the cs pin HIGH.
     * @param[in] GPIOx: where x can be (A..K) to select the GPIO peripheral.
-    • GPIO_Pin_x: specifies the port bit to be written. where x can be (0..15).
-    • PinState: specifies the value to be written to the selected bit. GPIO_PIN_SET: to set the port pin
+    * @param[in] GPIO_Pin_x: specifies the port bit to be written. where x can be (0..15).
+    * @param[in] PinState: specifies the value to be written to the selected bit. GPIO_PIN_SET: to set the port pin
     */ 
     /********************FPGA2*******************************************************/
  	  HAL_GPIO_WritePin (GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
