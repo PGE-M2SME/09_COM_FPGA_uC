@@ -1,0 +1,68 @@
+|Spi_slave
+SCLK => registre_input:C1.clk
+SCLK => mosi_sig.CLK
+SCLK => registre_ouput:C2.clk
+MOSI => mosi_sig.DATAIN
+MISO <= registre_ouput:C2.output
+SS => registre_input:C1.SS
+SS => mosi_sig.ENA
+send => registre_ouput:C2.cmd_send
+Data[0] <= registre_input:C1.q[0]
+Data[1] <= registre_input:C1.q[1]
+Data[2] <= registre_input:C1.q[2]
+Data[3] <= registre_input:C1.q[3]
+Data[4] <= registre_input:C1.q[4]
+Data[5] <= registre_input:C1.q[5]
+Data[6] <= registre_input:C1.q[6]
+Data[7] <= registre_input:C1.q[7]
+
+
+|Spi_slave|registre_input:C1
+clk => dataq[0].CLK
+clk => dataq[1].CLK
+clk => dataq[2].CLK
+clk => dataq[3].CLK
+clk => dataq[4].CLK
+clk => dataq[5].CLK
+clk => dataq[6].CLK
+clk => dataq[7].CLK
+entree => dataq[7].DATAIN
+q[0] <= dataq[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dataq[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dataq[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dataq[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dataq[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dataq[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dataq[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dataq[7].DB_MAX_OUTPUT_PORT_TYPE
+SS => dataq[0].ENA
+SS => dataq[1].ENA
+SS => dataq[2].ENA
+SS => dataq[3].ENA
+SS => dataq[4].ENA
+SS => dataq[5].ENA
+SS => dataq[6].ENA
+SS => dataq[7].ENA
+
+
+|Spi_slave|registre_ouput:C2
+clk => output~reg0.CLK
+clk => dataq[0].CLK
+clk => dataq[1].CLK
+clk => dataq[2].CLK
+clk => dataq[3].CLK
+clk => dataq[4].CLK
+clk => dataq[5].CLK
+clk => dataq[6].CLK
+clk => dataq[7].CLK
+cmd_send => dataq.OUTPUTSELECT
+cmd_send => dataq.OUTPUTSELECT
+cmd_send => dataq.OUTPUTSELECT
+cmd_send => dataq.OUTPUTSELECT
+cmd_send => dataq.OUTPUTSELECT
+cmd_send => dataq.OUTPUTSELECT
+cmd_send => dataq.OUTPUTSELECT
+cmd_send => output.OUTPUTSELECT
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

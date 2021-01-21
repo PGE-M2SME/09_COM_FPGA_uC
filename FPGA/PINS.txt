@@ -1,0 +1,7 @@
+LE FPGA utilisé est DE0 nano
+Les leds sont utilisées en sortie pour affiché l'octet reçu, pin des leds: A15, A13, B13, A11, D1, F3, B1, L3
+sortie MISO PIN D5
+entrée MOSI PIN A6
+entrée SCLK PIN D6
+entrée SS PIN C6
+entrée send PIN J15 (correspond à un bouton poussoir du FPGA)

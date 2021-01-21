@@ -54,8 +54,8 @@ all: main-build
 main-build: spi_stm32.elf secondary-outputs
 
 # Tool invocations
-spi_stm32.elf: $(OBJS) $(USER_OBJS) C:\Users\youss\Desktop\spi_stm32\spi_stm32\STM32L152RETX_FLASH.ld
-	arm-none-eabi-gcc -o "spi_stm32.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\youss\Desktop\spi_stm32\spi_stm32\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="spi_stm32.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+spi_stm32.elf: $(OBJS) $(USER_OBJS) C:\Users\chicken\Desktop\PGE_git_\09_COM_FPGA_uC\spi_stm32\spi_stm32\STM32L152RETX_FLASH.ld
+	arm-none-eabi-gcc -o "spi_stm32.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\chicken\Desktop\PGE_git_\09_COM_FPGA_uC\spi_stm32\spi_stm32\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="spi_stm32.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -27,9 +27,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  0002000c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00005477  00000000  00000000  00020035  2**0
+ 12 .debug_info   00005476  00000000  00000000  00020035  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_abbrev 000010a9  00000000  00000000  000254ac  2**0
+ 13 .debug_abbrev 000010a9  00000000  00000000  000254ab  2**0
                   CONTENTS, READONLY, DEBUGGING
  14 .debug_aranges 000005d0  00000000  00000000  00026558  2**3
                   CONTENTS, READONLY, DEBUGGING
@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  16 .debug_macro  000143e1  00000000  00000000  00027060  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_line   00004fe7  00000000  00000000  0003b441  2**0
+ 17 .debug_line   00004fe8  00000000  00000000  0003b441  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    0007f35c  00000000  00000000  00040428  2**0
+ 18 .debug_str    0007f376  00000000  00000000  00040429  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      0000007b  00000000  00000000  000bf784  2**0
+ 19 .comment      0000007b  00000000  00000000  000bf79f  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00001694  00000000  00000000  000bf800  2**2
+ 20 .debug_frame  00001694  00000000  00000000  000bf81c  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -355,73 +355,63 @@ Disassembly of section .text:
  800047e:	bf00      	nop
 
 08000480 <main>:
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_SPI1_Init(void);
+
 int main(void)
 {
  8000480:	b580      	push	{r7, lr}
  8000482:	b082      	sub	sp, #8
  8000484:	af00      	add	r7, sp, #0
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
  8000486:	f000 fa04 	bl	8000892 <HAL_Init>
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
   SystemClock_Config();
  800048a:	f000 f84d 	bl	8000528 <SystemClock_Config>
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
   MX_GPIO_Init();
  800048e:	f000 f8cf 	bl	8000630 <MX_GPIO_Init>
   MX_SPI1_Init();
  8000492:	f000 f897 	bl	80005c4 <MX_SPI1_Init>
-  /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
-  uint8_t data[2];
-   	data[0]= 0x00;  // multibyte write
+  uint8_t data[2]; // buffer to store data to be sent to the FPGA
+  data[0]= 0x00;
  8000496:	2300      	movs	r3, #0
  8000498:	713b      	strb	r3, [r7, #4]
-   	data[1] = 0;
+  data[1] = 0;
  800049a:	2300      	movs	r3, #0
  800049c:	717b      	strb	r3, [r7, #5]
-
-   /* Infinite loop */
-   /* USER CODE BEGIN WHILE */
-   while (1)
-   {
-	   HAL_GPIO_WritePin (GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);  // pull the cs pin low
+  while (1)
+  {
+    /********************FPGA1*******************************************************/
+	  HAL_GPIO_WritePin (GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
  800049e:	2200      	movs	r2, #0
  80004a0:	2180      	movs	r1, #128	; 0x80
  80004a2:	481e      	ldr	r0, [pc, #120]	; (800051c <main+0x9c>)
  80004a4:	f000 fcf8 	bl	8000e98 <HAL_GPIO_WritePin>
- 		  for(data[1]=0;data[1]<128;data[1]++)
+    * pull the cs pin LOW.
+    * @param[in] GPIOx: where x can be (A..K) to select the GPIO peripheral.
+    • GPIO_Pin_x: specifies the port bit to be written. where x can be (0..15).
+    • PinState: specifies the value to be written to the selected bit. GPIO_PIN_RESET: to clear the port pin
+    */ 
+ 		for(data[1]=0;data[1]<128;data[1]++)
  80004a8:	2300      	movs	r3, #0
  80004aa:	717b      	strb	r3, [r7, #5]
  80004ac:	e00d      	b.n	80004ca <main+0x4a>
  		  {
- 	  	HAL_SPI_Transmit (&hspi1, data, 2, 100);  // write data to register
+ 	    	HAL_SPI_Transmit (&hspi1, data, 2, 100);  // write data to register
  80004ae:	1d39      	adds	r1, r7, #4
  80004b0:	2364      	movs	r3, #100	; 0x64
  80004b2:	2202      	movs	r2, #2
  80004b4:	481a      	ldr	r0, [pc, #104]	; (8000520 <main+0xa0>)
  80004b6:	f001 fb1e 	bl	8001af6 <HAL_SPI_Transmit>
- 	  	HAL_Delay(1000);
+    * @param[in] hspi: pointer to a SPI_HandleTypeDef structure that contains the configuration information for SPI module.
+    • @param[in] pData: pointer to data buffer
+    • @param[in] Size: amount of data to be sent
+    • @param[in] Timeout: Timeout duration
+    */ 
+ 	  	  HAL_Delay(1000);
  80004ba:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  80004be:	f000 fa57 	bl	8000970 <HAL_Delay>
- 		  for(data[1]=0;data[1]<128;data[1]++)
+ 		for(data[1]=0;data[1]<128;data[1]++)
  80004c2:	797b      	ldrb	r3, [r7, #5]
  80004c4:	3301      	adds	r3, #1
  80004c6:	b2db      	uxtb	r3, r3
@@ -431,24 +421,27 @@ int main(void)
  80004ce:	2b00      	cmp	r3, #0
  80004d0:	daed      	bge.n	80004ae <main+0x2e>
  		  }
- 		  HAL_GPIO_WritePin (GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+ 		 HAL_GPIO_WritePin (GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
  80004d2:	2201      	movs	r2, #1
  80004d4:	2180      	movs	r1, #128	; 0x80
  80004d6:	4811      	ldr	r0, [pc, #68]	; (800051c <main+0x9c>)
  80004d8:	f000 fcde 	bl	8000e98 <HAL_GPIO_WritePin>
-
- 	  HAL_GPIO_WritePin (GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);  // pull the cs pin low
+    * @param[in] GPIOx: where x can be (A..K) to select the GPIO peripheral.
+    • GPIO_Pin_x: specifies the port bit to be written. where x can be (0..15).
+    • PinState: specifies the value to be written to the selected bit. GPIO_PIN_SET: to set the port pin
+    */ 
+    /********************FPGA2*******************************************************/
+ 	  HAL_GPIO_WritePin (GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
  80004dc:	2200      	movs	r2, #0
  80004de:	2140      	movs	r1, #64	; 0x40
  80004e0:	4810      	ldr	r0, [pc, #64]	; (8000524 <main+0xa4>)
  80004e2:	f000 fcd9 	bl	8000e98 <HAL_GPIO_WritePin>
-     /* USER CODE END WHILE */
  	  for(data[1]=0;data[1]<128;data[1]++)
  80004e6:	2300      	movs	r3, #0
  80004e8:	717b      	strb	r3, [r7, #5]
  80004ea:	e00d      	b.n	8000508 <main+0x88>
  	  {
- 		  	 HAL_SPI_Transmit (&hspi1, data, 2, 100);  // write data to register
+ 		  	 HAL_SPI_Transmit (&hspi1, data, 2, 100);
  80004ec:	1d39      	adds	r1, r7, #4
  80004ee:	2364      	movs	r3, #100	; 0x64
  80004f0:	2202      	movs	r2, #2
@@ -472,7 +465,7 @@ int main(void)
  8000512:	2140      	movs	r1, #64	; 0x40
  8000514:	4803      	ldr	r0, [pc, #12]	; (8000524 <main+0xa4>)
  8000516:	f000 fcbf 	bl	8000e98 <HAL_GPIO_WritePin>
-	   HAL_GPIO_WritePin (GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);  // pull the cs pin low
+	  HAL_GPIO_WritePin (GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
  800051a:	e7c0      	b.n	800049e <main+0x1e>
  800051c:	40020800 	.word	0x40020800
  8000520:	20000028 	.word	0x20000028
