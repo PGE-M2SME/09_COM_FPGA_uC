@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="SPI_slave">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Spi_slave|SPI_out:C2|lpm_mux:Mux0" CBX_FILE_NAME="mux_cqc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

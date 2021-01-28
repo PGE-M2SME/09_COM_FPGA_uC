@@ -18,7 +18,7 @@ architecture ar of registre_ouput is
 begin
   
   process(clk) begin  
-     if clk'event and clk='0' then
+     if clk'event and clk='1' then
 	 case cmd_send is 
 		when '0' => dataq <= test;					  -- prepare the send
 					output <= '0'; 					  -- output is low when not used	 
