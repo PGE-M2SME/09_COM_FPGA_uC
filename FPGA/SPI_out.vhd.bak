@@ -25,11 +25,11 @@ begin
   
   begin
      if clk'event and clk='1' then
-		if data_valid = '1' and cpt /= 8 then
+		if data_valid = '1' and cpt /= 9 then
 			SS <= '0';						  
 			output <= data_in(cpt);	
 			cpt := cpt + 1;
-			if cpt = 8 then
+			if cpt = 9 then
 				SS <= '1';
 				output <= '0';				
 			end if;
