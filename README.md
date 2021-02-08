@@ -17,7 +17,7 @@ SCLK    |      | SCLK(SPI)
 MISO    |      | MOSI(SPI)
 MOSI    |      | MISO(SPI)
 CS      |      | SS (SPI) GPIO : output
-CS_OUT  |      |  GPIO : intput
+CS_IN   |      | active when receiving signal from FPGA4S pin (CS_OUT) GPIO : intput
 
 
 Note : carte utilisée pour le test NUCLEO-L152RE
