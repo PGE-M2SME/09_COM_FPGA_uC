@@ -15,30 +15,75 @@ end SPI_out;
 
 architecture ar of SPI_out is
 
-signal data : std_logic_vector (7 downto 0);
+signal data 	  : std_logic_vector (7 downto 0);
+signal test 	  : std_logic_vector (7 downto 0);
+signal byte_send  : std_logic;
+signal output_sig : std_logic;
+signal cpt_max    : std_logic;
+signal SS_sig     : std_logic;
+signal cpt        : std_logic_vector (7 downto 0);
+signal reg        : std_logic_vector (7 downto 0);
 
 begin
-
-  process(clk) 
   
-  variable cpt : integer := 0;
+  test <= "01010101";
   
+  byte_send_p : process(clk) 
   begin
-     if clk'event and clk='1' then
-		if data_valid = '1' and cpt /= 9 then
-			SS <= '0';						  
-			output <= data_in(cpt);	
-			cpt := cpt + 1;
-			if cpt = 9 then
-				SS <= '1';
-				output <= '0';				
+	if clk'event and clk='1' then
+		if data_valid = '0' and cpt_max = '1' then 
+			byte_send <= '1';
+		else 
+			byte_send <= '0';
+		end if;
+	end if;
+  end process;
+  
+  reg_p : process(clk) 
+  begin
+	if clk'event and clk='1' then
+		if data_valid = '0' and byte_send = '0' then 
+			if(cpt = "000") then 
+				reg <= test;
+			else 
+				reg <= reg(6 downto 0) & '0';
 			end if;
 		end if;
-		if data_valid = '0' then 
-			cpt := 0;
-			SS <= '1';
-			output <= '0';
+	end if;
+  end process;
+   
+  output_sig_p : process(clk) 
+  begin
+	if clk'event and clk='1' then
+		if data_valid = '0' and byte_send = '0' then
+			if(cpt = "000") then 
+				output_sig <= test(7);
+			else 
+				output_sig <= reg(6);
+			end if;
+		else
+			output_sig <= '0';
 		end if;
-	 end if;
-  end process; 
+	end if;
+  end process;
+  
+  cpt_p : process(clk) 
+  begin
+	if clk'event and clk='1' then
+		if data_valid = '0' and byte_send = '0' then
+			if(cpt_max = '1') then
+				cpt <= (others => '0');
+			else
+				cpt <= cpt + 1;
+			end if;
+		end if;
+	end if;
+  end process;
+  
+  cpt_max <= '1' when cpt = "111" else '0';
+  
+  output <= output_sig;
+  
+  SS <= data_valid;
+  
 end ar;

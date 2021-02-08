@@ -36,8 +36,8 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone III"
-set_global_assignment -name DEVICE AUTO
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE22F17C6
 set_global_assignment -name TOP_LEVEL_ENTITY Spi_slave
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:10:12  JANUARY 21, 2021"
@@ -53,14 +53,6 @@ set_location_assignment PIN_C6 -to SS
 set_location_assignment PIN_D6 -to SCLK
 set_location_assignment PIN_A6 -to MOSI
 set_location_assignment PIN_D5 -to MISO
-set_location_assignment PIN_A15 -to Data[0]
-set_location_assignment PIN_A13 -to Data[1]
-set_location_assignment PIN_B13 -to Data[2]
-set_location_assignment PIN_A11 -to Data[3]
-set_location_assignment PIN_D1 -to Data[4]
-set_location_assignment PIN_F3 -to Data[5]
-set_location_assignment PIN_B1 -to Data[6]
-set_location_assignment PIN_L3 -to Data[7]
 set_global_assignment -name MISC_FILE "C:/Users/chicken/Desktop/PGE_git/09_COM_FPGA_uC/FPGA/SPI_slave.dpf"
 set_global_assignment -name MISC_FILE "C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/SPI_slave.dpf"
 set_global_assignment -name VHDL_FILE SPI_in.vhd
@@ -73,4 +65,18 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE simulation_SPI.vwf
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_location_assignment PIN_A15 -to Data_out[0]
+set_location_assignment PIN_A13 -to Data_out[1]
+set_location_assignment PIN_B13 -to Data_out[2]
+set_location_assignment PIN_A11 -to Data_out[3]
+set_location_assignment PIN_D1 -to Data_out[4]
+set_location_assignment PIN_F3 -to Data_out[5]
+set_location_assignment PIN_B1 -to Data_out[6]
+set_location_assignment PIN_L3 -to Data_out[7]
+set_location_assignment PIN_J15 -to Data_valid_in
+set_location_assignment PIN_E6 -to SS_out
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
