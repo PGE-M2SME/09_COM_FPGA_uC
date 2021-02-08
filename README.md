@@ -5,10 +5,15 @@
 ## Librarie STM32 (SPI MASTER)
 
 La librairie est encore en developpement.
-La librairie se trouve dans le dossier "driver"
-Environnement de developpement : CubeMX et CubeIDE (vous pouvez utiliser votre IDE préférer)
-Sur cubeMX, après choix du bus spi, configurer le comme suite
+
+La librairie se trouve dans le dossier "driver".
+
+Environnement de developpement : CubeMX et CubeIDE (vous pouvez utiliser votre IDE préférer).
+
+Sur cubeMX, après choix du bus spi, configurer le comme suite.
+
 CPOL = 0
+
 CPHA = 1
 
 Entrées | PIN  | Description
