@@ -60,15 +60,6 @@ set_global_assignment -name VHDL_FILE SPI_out.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulation_SPI_in.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulation_SPI_out.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulation_SPI.vwf
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE simulation_SPI.vwf
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
 set_location_assignment PIN_A15 -to Data_out[0]
 set_location_assignment PIN_A13 -to Data_out[1]
 set_location_assignment PIN_B13 -to Data_out[2]
@@ -79,4 +70,13 @@ set_location_assignment PIN_B1 -to Data_out[6]
 set_location_assignment PIN_L3 -to Data_out[7]
 set_location_assignment PIN_J15 -to Data_valid_in
 set_location_assignment PIN_E6 -to SS_out
+set_global_assignment -name VECTOR_WAVEFORM_FILE simu.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE simulation_SPI_out.vwf
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -45,6 +45,5 @@ begin
 C1 : SPI_in port map(SCLK, MOSI, Data_out, Data_valid_out, SS); 
 
 C2 : SPI_out port map(SCLK, SS_out, Data_valid_in, Data_in, MISO);  
-											   
-											  
+											   										  
 end ar;

@@ -20,7 +20,7 @@ begin
   process(clk) 
 	variable cpt : integer := 8;
   begin
-     if clk'event and clk='1' then
+     if clk'event and clk='0' then
 		if (SS = '0') then						  
 			data_valid <= '0';
 			dataq <= dataq(6 downto 0) & '0';

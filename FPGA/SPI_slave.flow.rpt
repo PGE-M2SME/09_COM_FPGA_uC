@@ -1,5 +1,5 @@
 Flow report for SPI_slave
-Thu Feb 04 16:02:38 2021
+Sun Feb 28 22:19:25 2021
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Thu Feb 04 16:02:36 2021        ;
+; Flow Status                        ; Successful - Sun Feb 28 22:19:24 2021        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; SPI_slave                                    ;
 ; Top-level Entity Name              ; Spi_slave                                    ;
@@ -46,10 +46,10 @@ applicable agreement for further details.
 ; Device                             ; EP4CE22F17C6                                 ;
 ; Timing Models                      ; Preliminary                                  ;
 ; Met timing requirements            ; N/A                                          ;
-; Total logic elements               ; 105 / 22,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 97 / 22,320 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 58 / 22,320 ( < 1 % )                        ;
-; Total registers                    ; 58                                           ;
+; Total logic elements               ; 83 / 22,320 ( < 1 % )                        ;
+;     Total combinational functions  ; 75 / 22,320 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 41 / 22,320 ( < 1 % )                        ;
+; Total registers                    ; 41                                           ;
 ; Total pins                         ; 23 / 154 ( 15 % )                            ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                          ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/04/2021 16:02:24 ;
+; Start date & time ; 02/28/2021 22:19:17 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SPI_slave           ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                               ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 84440849534662.161245094415532                                      ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 84440849534662.161454715712656                                      ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                                  ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                                   ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Users/chicken/Desktop/PGE_git/09_COM_FPGA_uC/FPGA/SPI_slave.dpf  ; --            ; --          ; --             ;
@@ -91,11 +91,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 243 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 280 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 238 MB              ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 243 MB              ; 00:00:01                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 280 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 238 MB              ; 00:00:01                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 237 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:06                           ;
+; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:06                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

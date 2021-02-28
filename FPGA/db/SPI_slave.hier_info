@@ -121,14 +121,6 @@ SS => dataq[0].ENA
 
 
 |Spi_slave|SPI_out:C2
-clk => cpt[0].CLK
-clk => cpt[1].CLK
-clk => cpt[2].CLK
-clk => cpt[3].CLK
-clk => cpt[4].CLK
-clk => cpt[5].CLK
-clk => cpt[6].CLK
-clk => cpt[7].CLK
 clk => output_sig.CLK
 clk => reg[0].CLK
 clk => reg[1].CLK
@@ -137,11 +129,16 @@ clk => reg[3].CLK
 clk => reg[4].CLK
 clk => reg[5].CLK
 clk => reg[6].CLK
-clk => byte_send.CLK
 SS <= data_valid.DB_MAX_OUTPUT_PORT_TYPE
 data_valid => SS.DATAIN
-data_valid => output_sig_p.IN1
-data_valid => byte_send_p.IN1
+data_valid => output_sig.OUTPUTSELECT
+data_valid => reg[0].ENA
+data_valid => reg[6].ENA
+data_valid => reg[5].ENA
+data_valid => reg[4].ENA
+data_valid => reg[3].ENA
+data_valid => reg[2].ENA
+data_valid => reg[1].ENA
 data_in[0] => ~NO_FANOUT~
 data_in[1] => ~NO_FANOUT~
 data_in[2] => ~NO_FANOUT~

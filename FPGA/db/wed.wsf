@@ -167,11 +167,150 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git/09_COM_FPGA_uC/FPGA/simulation_spi.vwf"
 	}
 }
 
+VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.vwf")
+{
+	ZOOM{
+		ZBEGIN = 269274;
+		ZEND = 478873;
+		NUMERATOR = 1422;
+		DENOMINATOR = 229800;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "input";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "SS";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "divider 2743";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_valid";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "divider 2553";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
 VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI.vwf")
 {
 	ZOOM{
-		ZBEGIN = 201629;
-		ZEND = 471085;
+		ZBEGIN = 137800;
+		ZEND = 397200;
 		NUMERATOR = 1218;
 		DENOMINATOR = 243600;
 		TOP_INDEX = 0;
@@ -402,13 +541,13 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI.vwf
 	}
 }
 
-VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.vwf")
+VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simu.vwf")
 {
 	ZOOM{
-		ZBEGIN = 269274;
-		ZEND = 478873;
-		NUMERATOR = 1422;
-		DENOMINATOR = 229800;
+		ZBEGIN = 0;
+		ZEND = 197378;
+		NUMERATOR = 1297;
+		DENOMINATOR = 250000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -420,7 +559,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "clk";
+		SIGNAL = "SCLK";
 		INDEX = 0;
 		FORMAT = E;
 		SCALE = 1;
@@ -428,7 +567,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "input";
+		SIGNAL = "Data_valid_in";
 		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
@@ -436,7 +575,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SS";
+		SIGNAL = "divider 1047";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -444,7 +583,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "divider 2743";
+		SIGNAL = "SS_out";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -452,15 +591,15 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out";
+		SIGNAL = "MISO";
 		INDEX = 4;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out[7]";
+		SIGNAL = "Data_valid_out";
 		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
@@ -468,7 +607,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out[6]";
+		SIGNAL = "Data_out[0]";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -476,7 +615,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out[5]";
+		SIGNAL = "Data_out[1]";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -484,7 +623,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out[4]";
+		SIGNAL = "Data_out[2]";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -492,7 +631,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out[3]";
+		SIGNAL = "Data_out[3]";
 		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
@@ -500,7 +639,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out[2]";
+		SIGNAL = "Data_out[4]";
 		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
@@ -508,7 +647,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out[1]";
+		SIGNAL = "Data_out[5]";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -516,7 +655,7 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_out[0]";
+		SIGNAL = "Data_out[6]";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -524,16 +663,8 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_valid";
+		SIGNAL = "Data_out[7]";
 		INDEX = 13;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "divider 2553";
-		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -544,10 +675,10 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_in.
 VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_out.vwf")
 {
 	ZOOM{
-		ZBEGIN = 177215;
-		ZEND = 633262;
-		NUMERATOR = 1422;
-		DENOMINATOR = 500000;
+		ZBEGIN = 190141;
+		ZEND = 379837;
+		NUMERATOR = 1297;
+		DENOMINATOR = 189696;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -665,6 +796,158 @@ VECTOR("C:/Users/chicken/Desktop/PGE_git_/09_COM_FPGA_uC/FPGA/simulation_SPI_out
 	LINE{
 		SIGNAL = "SS";
 		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "divider 1633";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "byte_send";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt";
+		INDEX = 16;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt[7]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt[6]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt[5]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt[4]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt[3]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt[2]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt[1]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cpt[0]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg";
+		INDEX = 25;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg[6]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg[5]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg[4]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg[3]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg[2]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg[1]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg[0]";
+		INDEX = 32;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPI_slave
-Thu Feb 04 16:02:27 2021
+Sun Feb 28 22:19:18 2021
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -13,10 +13,12 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -42,15 +44,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 04 16:02:27 2021        ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 28 22:19:18 2021        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; SPI_slave                                    ;
 ; Top-level Entity Name              ; Spi_slave                                    ;
 ; Family                             ; Cyclone IV E                                 ;
-; Total logic elements               ; 105                                          ;
-;     Total combinational functions  ; 97                                           ;
-;     Dedicated logic registers      ; 58                                           ;
-; Total registers                    ; 58                                           ;
+; Total logic elements               ; 83                                           ;
+;     Total combinational functions  ; 75                                           ;
+;     Dedicated logic registers      ; 41                                           ;
+; Total registers                    ; 41                                           ;
 ; Total pins                         ; 23                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
@@ -162,45 +164,65 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 105        ;
-;                                             ;            ;
-; Total combinational functions               ; 97         ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 46         ;
-;     -- 3 input functions                    ; 1          ;
-;     -- <=2 input functions                  ; 50         ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 59         ;
-;     -- arithmetic mode                      ; 38         ;
-;                                             ;            ;
-; Total registers                             ; 58         ;
-;     -- Dedicated logic registers            ; 58         ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 23         ;
-; Maximum fan-out node                        ; SCLK~input ;
-; Maximum fan-out                             ; 58         ;
-; Total fan-out                               ; 458        ;
-; Average fan-out                             ; 2.28       ;
-+---------------------------------------------+------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 83       ;
+;                                             ;          ;
+; Total combinational functions               ; 75       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 42       ;
+;     -- 3 input functions                    ; 1        ;
+;     -- <=2 input functions                  ; 32       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 44       ;
+;     -- arithmetic mode                      ; 31       ;
+;                                             ;          ;
+; Total registers                             ; 41       ;
+;     -- Dedicated logic registers            ; 41       ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 23       ;
+; Maximum fan-out node                        ; SS~input ;
+; Maximum fan-out                             ; 41       ;
+; Total fan-out                               ; 357      ;
+; Average fan-out                             ; 2.20     ;
++---------------------------------------------+----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; |Spi_slave                 ; 97 (0)            ; 58 (0)       ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |Spi_slave            ; work         ;
-;    |SPI_in:C1|             ; 75 (75)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Spi_slave|SPI_in:C1  ;              ;
-;    |SPI_out:C2|            ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Spi_slave|SPI_out:C2 ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+; |Spi_slave                 ; 75 (0)            ; 41 (0)       ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |Spi_slave           ; work         ;
+;    |SPI_in:C1|             ; 75 (75)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Spi_slave|SPI_in:C1 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; SPI_out:C2|reg[0..6]                  ; Stuck at GND due to stuck port data_in ;
+; SPI_out:C2|output_sig                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                 ;
++-------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name     ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++-------------------+---------------------------+-----------------------------------------------------------------------------+
+; SPI_out:C2|reg[0] ; Stuck at GND              ; SPI_out:C2|reg[1], SPI_out:C2|reg[2], SPI_out:C2|reg[3], SPI_out:C2|reg[4], ;
+;                   ; due to stuck port data_in ; SPI_out:C2|reg[5], SPI_out:C2|reg[6]                                        ;
++-------------------+---------------------------+-----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -208,12 +230,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 58    ;
+; Total registers                              ; 41    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 23    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -233,7 +255,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |Spi_slave|SPI_in:C1|cpt[5] ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |Spi_slave|SPI_in:C1|cpt[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
@@ -243,7 +265,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Feb 04 16:02:24 2021
+    Info: Processing started: Sun Feb 28 22:19:16 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPI_slave -c SPI_slave
 Warning: Ignored duplicate of assignment XR_ROOT_REGION for node ""
 Warning: Ignored duplicate of assignment XR_MEMBER_STATE for node ""
@@ -265,6 +287,10 @@ Info: Found 2 design units, including 1 entities, in source file spi_out.vhd
 Info: Elaborating entity "Spi_slave" for the top level hierarchy
 Info: Elaborating entity "SPI_in" for hierarchy "SPI_in:C1"
 Info: Elaborating entity "SPI_out" for hierarchy "SPI_out:C2"
+Warning (10541): VHDL Signal Declaration warning at SPI_out.vhd(18): used implicit default value for signal "data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at SPI_out.vhd(25): object "byte_send" assigned a value but never read
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "MISO" is stuck at GND
 Info: Timing-Driven Synthesis is running
 Warning: Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Data_in[0]"
@@ -275,14 +301,14 @@ Warning: Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Data_in[5]"
     Warning (15610): No output dependent on input pin "Data_in[6]"
     Warning (15610): No output dependent on input pin "Data_in[7]"
-Info: Implemented 129 device resources after synthesis - the final resource count might be different
+Info: Implemented 106 device resources after synthesis - the final resource count might be different
     Info: Implemented 12 input pins
     Info: Implemented 11 output pins
-    Info: Implemented 106 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Implemented 83 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 21 warnings
     Info: Peak virtual memory: 243 megabytes
-    Info: Processing ended: Thu Feb 04 16:02:27 2021
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Sun Feb 28 22:19:18 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

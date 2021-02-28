@@ -18,7 +18,7 @@ architecture ar of SPI_in is
   
 begin
   process(clk) 
-  variable cpt : integer := 8;
+	variable cpt : integer := 8;
   begin
      if clk'event and clk='1' then
 		if (SS = '0') then						  

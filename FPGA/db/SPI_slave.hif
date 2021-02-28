@@ -20,10 +20,43 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-Spi_slave
+SPI_in
 # storage
 db|SPI_slave.(0).cnf
 db|SPI_slave.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+spi_in.vhd
+9b7efedde543658c8396412fa191e6a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+SPI_in:C1
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Spi_slave
+# storage
+db|SPI_slave.(2).cnf
+db|SPI_slave.(2).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -53,49 +86,10 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-SPI_in
-# storage
-db|SPI_slave.(1).cnf
-db|SPI_slave.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-spi_in.vhd
-fb64213729a4a78cd761a7ba4a8c5ce
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(data_out)
-7 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-SPI_in:C1
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 SPI_out
 # storage
-db|SPI_slave.(2).cnf
-db|SPI_slave.(2).cnf
+db|SPI_slave.(1).cnf
+db|SPI_slave.(1).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -103,7 +97,7 @@ ON
 # case_insensitive
 # source_file
 spi_out.vhd
-68692f5d54e705877f61b73fd133c46
+4385fb2a97de92eaf6fbb72238b1d37
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

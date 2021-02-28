@@ -1,0 +1,7 @@
+MCU_FPGA_com.c:20:6:get_struct	16	static
+MCU_FPGA_com.c:26:6:Read_SPI	16	static
+MCU_FPGA_com.c:57:6:allocation_trame	16	static
+MCU_FPGA_com.c:123:6:Send_SPI	16	static
+MCU_FPGA_com.c:131:6:Envoie_Bus_com	24	static
+MCU_FPGA_com.c:171:6:Envoie_DVI	24	static
+MCU_FPGA_com.c:247:6:HAL_GPIO_EXTI_Callback	24	static

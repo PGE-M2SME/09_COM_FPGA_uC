@@ -1,0 +1,8 @@
+pcstm32.c:24:6:s_gen_flux_config	56	static
+pcstm32.c:112:6:s_gen_bus_config	48	static
+pcstm32.c:213:6:s_rec_bus_config	24	static
+pcstm32.c:226:6:s_rec_flux_config	24	static
+pcstm32.c:238:6:help	192	static
+pcstm32.c:338:6:confirmationCMD	760	static
+pcstm32.c:488:6:envoiePCSTM	16	static
+pcstm32.c:494:6:clear_buffer	24	static
