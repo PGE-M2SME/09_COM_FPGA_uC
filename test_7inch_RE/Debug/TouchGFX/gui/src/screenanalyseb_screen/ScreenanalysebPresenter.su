@@ -1,0 +1,14 @@
+Presenter.hpp:40:18:virtual void touchgfx::Presenter::activate()	16	static
+Presenter.hpp:50:18:virtual void touchgfx::Presenter::deactivate()	16	static
+Presenter.hpp:55:13:touchgfx::Presenter::~Presenter()	16	static
+Presenter.hpp:55:13:virtual touchgfx::Presenter::~Presenter()	16	static
+Presenter.hpp:61:5:touchgfx::Presenter::Presenter()	16	static
+ModelListener.hpp:9:5:ModelListener::ModelListener()	16	static
+ModelListener.hpp:11:13:ModelListener::~ModelListener()	16	static
+ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	16	static
+ScreenanalysebPresenter.hpp:28:13:ScreenanalysebPresenter::~ScreenanalysebPresenter()	16	static
+ScreenanalysebPresenter.hpp:28:13:virtual ScreenanalysebPresenter::~ScreenanalysebPresenter()	16	static
+ScreenanalysebPresenter.cpp:4:1:ScreenanalysebPresenter::ScreenanalysebPresenter(ScreenanalysebView&)	16	static
+ScreenanalysebPresenter.cpp:10:6:virtual void ScreenanalysebPresenter::activate()	16	static
+ScreenanalysebPresenter.cpp:15:6:virtual void ScreenanalysebPresenter::deactivate()	16	static
+ScreenanalysebPresenter.cpp:20:10:virtual uint16_t ScreenanalysebPresenter::setRecBus(int)	16	static

@@ -1,0 +1,115 @@
+Drawable.hpp:64:13:touchgfx::Drawable::~Drawable()	16	static
+Drawable.hpp:64:13:virtual touchgfx::Drawable::~Drawable()	16	static
+Drawable.hpp:134:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	16	static
+Drawable.hpp:271:18:virtual void touchgfx::Drawable::setX(int16_t)	16	static
+Drawable.hpp:283:18:virtual void touchgfx::Drawable::setY(int16_t)	16	static
+Drawable.hpp:312:18:virtual void touchgfx::Drawable::setWidth(int16_t)	16	static
+Drawable.hpp:324:18:virtual void touchgfx::Drawable::setHeight(int16_t)	16	static
+Drawable.hpp:334:18:virtual void touchgfx::Drawable::childGeometryChanged()	16	static
+Drawable.hpp:345:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	16	static
+Drawable.hpp:356:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	16	static
+Drawable.hpp:444:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
+Drawable.hpp:454:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
+Drawable.hpp:490:10:bool touchgfx::Drawable::isVisible() const	16	static
+Drawable.hpp:502:10:bool touchgfx::Drawable::isTouchable() const	16	static
+Drawable.hpp:541:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
+Drawable.hpp:578:10:void touchgfx::Drawable::resetDrawChainCache()	16	static
+Drawable.hpp:656:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	24	static
+Screen.hpp:49:13:touchgfx::Screen::~Screen()	16	static
+Screen.hpp:49:13:virtual touchgfx::Screen::~Screen()	16	static
+Screen.hpp:96:18:virtual void touchgfx::Screen::setupScreen()	16	static
+Screen.hpp:107:18:virtual void touchgfx::Screen::afterTransition()	16	static
+Screen.hpp:118:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
+Screen.hpp:147:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
+Screen.hpp:157:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+Widget.hpp:50:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	24	static
+Widget.hpp:39:7:touchgfx::Widget::~Widget()	16	static
+Widget.hpp:39:7:virtual touchgfx::Widget::~Widget()	16	static
+AbstractButton.hpp:34:7:touchgfx::AbstractButton::~AbstractButton()	16	static
+AbstractButton.hpp:34:7:virtual touchgfx::AbstractButton::~AbstractButton()	16	static
+TypedText.hpp:68:13:touchgfx::TypedText::~TypedText()	16	static
+TypedText.hpp:68:13:virtual touchgfx::TypedText::~TypedText()	16	static
+TextArea.hpp:44:7:touchgfx::TextArea::~TextArea()	16	static
+TextArea.hpp:44:7:virtual touchgfx::TextArea::~TextArea()	16	static
+View.hpp:40:7:touchgfx::View<Screengenfluxvideo3Presenter>::~View()	16	static
+View.hpp:40:7:virtual touchgfx::View<Screengenfluxvideo3Presenter>::~View()	16	static
+Screengenfluxvideo3ViewBase.hpp:20:13:Screengenfluxvideo3ViewBase::~Screengenfluxvideo3ViewBase()	16	static
+Screengenfluxvideo3ViewBase.hpp:20:13:virtual Screengenfluxvideo3ViewBase::~Screengenfluxvideo3ViewBase()	16	static
+Screengenfluxvideo3View.hpp:11:13:Screengenfluxvideo3View::~Screengenfluxvideo3View()	16	static
+Screengenfluxvideo3View.hpp:11:13:virtual Screengenfluxvideo3View::~Screengenfluxvideo3View()	16	static
+Screengenfluxvideo3View.cpp:6:1:Screengenfluxvideo3View::Screengenfluxvideo3View()	16	static
+Screengenfluxvideo3View.cpp:11:6:virtual void Screengenfluxvideo3View::setupScreen()	16	static
+Screengenfluxvideo3View.cpp:17:6:virtual void Screengenfluxvideo3View::tearDownScreen()	16	static
+Screengenfluxvideo3View.cpp:22:6:virtual void Screengenfluxvideo3View::l1_0()	40	static
+Screengenfluxvideo3View.cpp:35:6:virtual void Screengenfluxvideo3View::l1_1()	40	static
+Screengenfluxvideo3View.cpp:48:6:virtual void Screengenfluxvideo3View::l1_2()	40	static
+Screengenfluxvideo3View.cpp:60:6:virtual void Screengenfluxvideo3View::l1_3()	40	static
+Screengenfluxvideo3View.cpp:73:6:virtual void Screengenfluxvideo3View::l1_4()	40	static
+Screengenfluxvideo3View.cpp:86:6:virtual void Screengenfluxvideo3View::l1_5()	40	static
+Screengenfluxvideo3View.cpp:99:6:virtual void Screengenfluxvideo3View::l1_6()	40	static
+Screengenfluxvideo3View.cpp:112:6:virtual void Screengenfluxvideo3View::l1_7()	40	static
+Screengenfluxvideo3View.cpp:125:6:virtual void Screengenfluxvideo3View::l1_8()	40	static
+Screengenfluxvideo3View.cpp:138:6:virtual void Screengenfluxvideo3View::l1_9()	40	static
+Screengenfluxvideo3View.cpp:151:6:virtual void Screengenfluxvideo3View::l1_er()	40	static
+Screengenfluxvideo3View.cpp:164:6:virtual void Screengenfluxvideo3View::l1_enter()	40	static
+Screengenfluxvideo3View.cpp:183:6:virtual void Screengenfluxvideo3View::l2_0()	40	static
+Screengenfluxvideo3View.cpp:195:6:virtual void Screengenfluxvideo3View::l2_1()	40	static
+Screengenfluxvideo3View.cpp:207:6:virtual void Screengenfluxvideo3View::l2_2()	40	static
+Screengenfluxvideo3View.cpp:219:6:virtual void Screengenfluxvideo3View::l2_3()	40	static
+Screengenfluxvideo3View.cpp:232:6:virtual void Screengenfluxvideo3View::l2_4()	40	static
+Screengenfluxvideo3View.cpp:245:6:virtual void Screengenfluxvideo3View::l2_5()	40	static
+Screengenfluxvideo3View.cpp:258:6:virtual void Screengenfluxvideo3View::l2_6()	40	static
+Screengenfluxvideo3View.cpp:271:6:virtual void Screengenfluxvideo3View::l2_7()	40	static
+Screengenfluxvideo3View.cpp:284:6:virtual void Screengenfluxvideo3View::l2_8()	40	static
+Screengenfluxvideo3View.cpp:297:6:virtual void Screengenfluxvideo3View::l2_9()	40	static
+Screengenfluxvideo3View.cpp:310:6:virtual void Screengenfluxvideo3View::l2_er()	40	static
+Screengenfluxvideo3View.cpp:323:6:virtual void Screengenfluxvideo3View::l2_enter()	40	static
+Screengenfluxvideo3View.cpp:340:6:virtual void Screengenfluxvideo3View::l3_0()	40	static
+Screengenfluxvideo3View.cpp:352:6:virtual void Screengenfluxvideo3View::l3_1()	40	static
+Screengenfluxvideo3View.cpp:364:6:virtual void Screengenfluxvideo3View::l3_2()	40	static
+Screengenfluxvideo3View.cpp:376:6:virtual void Screengenfluxvideo3View::l3_3()	40	static
+Screengenfluxvideo3View.cpp:389:6:virtual void Screengenfluxvideo3View::l3_4()	40	static
+Screengenfluxvideo3View.cpp:402:6:virtual void Screengenfluxvideo3View::l3_5()	40	static
+Screengenfluxvideo3View.cpp:415:6:virtual void Screengenfluxvideo3View::l3_6()	40	static
+Screengenfluxvideo3View.cpp:428:6:virtual void Screengenfluxvideo3View::l3_7()	40	static
+Screengenfluxvideo3View.cpp:441:6:virtual void Screengenfluxvideo3View::l3_8()	40	static
+Screengenfluxvideo3View.cpp:454:6:virtual void Screengenfluxvideo3View::l3_9()	40	static
+Screengenfluxvideo3View.cpp:467:6:virtual void Screengenfluxvideo3View::l3_er()	40	static
+Screengenfluxvideo3View.cpp:480:6:virtual void Screengenfluxvideo3View::l3_enter()	40	static
+Screengenfluxvideo3View.cpp:497:6:virtual void Screengenfluxvideo3View::l4_0()	40	static
+Screengenfluxvideo3View.cpp:509:6:virtual void Screengenfluxvideo3View::l4_1()	40	static
+Screengenfluxvideo3View.cpp:521:6:virtual void Screengenfluxvideo3View::l4_2()	40	static
+Screengenfluxvideo3View.cpp:533:6:virtual void Screengenfluxvideo3View::l4_3()	40	static
+Screengenfluxvideo3View.cpp:546:6:virtual void Screengenfluxvideo3View::l4_4()	40	static
+Screengenfluxvideo3View.cpp:559:6:virtual void Screengenfluxvideo3View::l4_5()	40	static
+Screengenfluxvideo3View.cpp:572:6:virtual void Screengenfluxvideo3View::l4_6()	40	static
+Screengenfluxvideo3View.cpp:585:6:virtual void Screengenfluxvideo3View::l4_7()	40	static
+Screengenfluxvideo3View.cpp:598:6:virtual void Screengenfluxvideo3View::l4_8()	40	static
+Screengenfluxvideo3View.cpp:611:6:virtual void Screengenfluxvideo3View::l4_9()	40	static
+Screengenfluxvideo3View.cpp:624:6:virtual void Screengenfluxvideo3View::l4_er()	40	static
+Screengenfluxvideo3View.cpp:637:6:virtual void Screengenfluxvideo3View::l4_enter()	40	static
+Screengenfluxvideo3View.cpp:655:6:virtual void Screengenfluxvideo3View::clear1()	40	static
+Screengenfluxvideo3View.cpp:666:6:virtual void Screengenfluxvideo3View::clear2()	40	static
+Screengenfluxvideo3View.cpp:677:6:virtual void Screengenfluxvideo3View::clear3()	40	static
+Screengenfluxvideo3View.cpp:688:6:virtual void Screengenfluxvideo3View::clear4()	40	static
+Screengenfluxvideo3View.cpp:700:6:virtual void Screengenfluxvideo3View::init_val()	16	static
+Screengenfluxvideo3View.cpp:724:6:virtual void Screengenfluxvideo3View::setGenFlux(int, int)	24	static
+Screengenfluxvideo3View.cpp:729:5:virtual int Screengenfluxvideo3View::transform_number(int16_t*)	16	static
+Container.hpp:42:7:touchgfx::Container::~Container()	16	static
+Container.hpp:42:7:virtual touchgfx::Container::~Container()	16	static
+Box.hpp:36:7:touchgfx::Box::~Box()	16	static
+Box.hpp:36:7:virtual touchgfx::Box::~Box()	16	static
+Button.hpp:33:7:touchgfx::Button::~Button()	16	static
+Button.hpp:33:7:virtual touchgfx::Button::~Button()	16	static
+ButtonWithIcon.hpp:36:7:touchgfx::ButtonWithIcon::~ButtonWithIcon()	16	static
+ButtonWithIcon.hpp:36:7:virtual touchgfx::ButtonWithIcon::~ButtonWithIcon()	16	static
+ButtonWithLabel.hpp:40:7:touchgfx::ButtonWithLabel::~ButtonWithLabel()	16	static
+ButtonWithLabel.hpp:40:7:virtual touchgfx::ButtonWithLabel::~ButtonWithLabel()	16	static
+TextAreaWithWildcard.hpp:37:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
+TextAreaWithWildcard.hpp:37:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
+Callback.hpp:362:8:touchgfx::Callback<Screengenfluxvideo3ViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
+Callback.hpp:362:8:virtual touchgfx::Callback<Screengenfluxvideo3ViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
+Callback.hpp:141:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButton&]	16	static
+Callback.hpp:141:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButton&]	16	static
+Callback.hpp:392:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screengenfluxvideo3ViewBase; T1 = const touchgfx::AbstractButton&]	16	static
+Callback.hpp:402:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screengenfluxvideo3ViewBase; T1 = const touchgfx::AbstractButton&]	16	static

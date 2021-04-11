@@ -1,0 +1,5 @@
+lcd_TP.c:13:9:LCD_TP_read_register	40	static
+lcd_TP.c:18:9:LCD_TP_write_register	40	static
+lcd_TP.c:24:9:LCD_TP_init	120	static
+lcd_TP.c:194:9:LCD_TP_getStatus	16	static
+lcd_TP.c:201:6:LCD_TP_getT1	24	static

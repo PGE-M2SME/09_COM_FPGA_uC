@@ -1,0 +1,6 @@
+liaison_uc_fpga.c:76:6:allocation_trame	16	static
+liaison_uc_fpga.c:109:6:Read_SPI	16	static
+liaison_uc_fpga.c:135:6:Send_SPI	16	static
+liaison_uc_fpga.c:143:6:Envoie_Bus_com	16	static
+liaison_uc_fpga.c:183:6:Envoie_DVI	16	static
+liaison_uc_fpga.c:259:6:HAL_GPIO_EXTI_Callback	24	static

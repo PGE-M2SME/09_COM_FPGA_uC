@@ -1,0 +1,94 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+ELF_SRCS := 
+C_UPPER_SRCS := 
+CXX_SRCS := 
+C++_SRCS := 
+OBJ_SRCS := 
+S_SRCS := 
+CC_SRCS := 
+C_SRCS := 
+CPP_SRCS := 
+S_UPPER_SRCS := 
+O_SRCS := 
+OBJDUMP_LIST := 
+C_UPPER_DEPS := 
+S_DEPS := 
+C_DEPS := 
+OBJCOPY_BIN := 
+CC_DEPS := 
+SIZE_OUTPUT := 
+C++_DEPS := 
+EXECUTABLES := 
+OBJS := 
+CXX_DEPS := 
+S_UPPER_DEPS := 
+CPP_DEPS := 
+
+# Every subdirectory with source files must be described here
+SUBDIRS := \
+Core/Src \
+Core/Startup \
+Drivers/STM32F4xx_HAL_Driver/Src \
+Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
+Middlewares/ST/STM32_USB_Device_Library/Core/Src \
+TouchGFX/App \
+TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/common \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screenanalyseb_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screenanalysef_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screengenfluxvideo1_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screengenfluxvideo2_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screengenfluxvideo3_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screengenfluxvideo4_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/images/src \
+TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer \
+TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src \
+TouchGFX/build/MINGW32_NT-6.2/generated/texts/src \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/common \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/model \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screenanalyseb_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screenanalysef_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screengenfluxvideo1_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screengenfluxvideo2_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screengenfluxvideo3_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screengenfluxvideo4_screen \
+TouchGFX/build/MINGW32_NT-6.2/simulator \
+TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/driver/touch \
+TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/sdl2 \
+TouchGFX/generated/fonts/src \
+TouchGFX/generated/gui_generated/src/common \
+TouchGFX/generated/gui_generated/src/screen_screen \
+TouchGFX/generated/gui_generated/src/screenanalyseb_screen \
+TouchGFX/generated/gui_generated/src/screenanalysef_screen \
+TouchGFX/generated/gui_generated/src/screengenbus1_screen \
+TouchGFX/generated/gui_generated/src/screengenbus2_screen \
+TouchGFX/generated/gui_generated/src/screengenbus3_screen \
+TouchGFX/generated/gui_generated/src/screengenfluxvideo1_screen \
+TouchGFX/generated/gui_generated/src/screengenfluxvideo2_screen \
+TouchGFX/generated/gui_generated/src/screengenfluxvideo3_screen \
+TouchGFX/generated/gui_generated/src/screengenfluxvideo4_screen \
+TouchGFX/generated/images/src \
+TouchGFX/generated/images/src/__designer \
+TouchGFX/generated/texts/src \
+TouchGFX/gui/src/common \
+TouchGFX/gui/src/model \
+TouchGFX/gui/src/screen_screen \
+TouchGFX/gui/src/screenanalyseb_screen \
+TouchGFX/gui/src/screenanalysef_screen \
+TouchGFX/gui/src/screengenbus1_screen \
+TouchGFX/gui/src/screengenbus2_screen \
+TouchGFX/gui/src/screengenbus3_screen \
+TouchGFX/gui/src/screengenfluxvideo1_screen \
+TouchGFX/gui/src/screengenfluxvideo2_screen \
+TouchGFX/gui/src/screengenfluxvideo3_screen \
+TouchGFX/gui/src/screengenfluxvideo4_screen \
+TouchGFX/target \
+TouchGFX/target/generated \
+USB_DEVICE/App \
+USB_DEVICE/Target \
+

@@ -1,0 +1,6 @@
+Model.cpp:56:1:Model::Model()	16	static
+Model.cpp:61:6:void Model::tick()	16	static
+Model.cpp:66:10:virtual uint16_t Model::setRecFlux(int)	16	static
+Model.cpp:106:10:virtual uint16_t Model::setRecBus(int)	16	static
+Model.cpp:140:6:virtual void Model::setGenFlux(int, int)	24	static
+Model.cpp:196:6:virtual void Model::setGenBus(int, int)	24	static
